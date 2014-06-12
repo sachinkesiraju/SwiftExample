@@ -13,14 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.title = "Swift Demo"
+        self.title = "Swift Example"
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)
-    {
-        NSLog("Preparing for segue")
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

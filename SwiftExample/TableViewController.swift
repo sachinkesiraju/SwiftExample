@@ -10,6 +10,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    var tableArray:NSMutableArray = ["Swift", "Objective -C", "Python", "Java", "Ruby"]
+    
     init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
@@ -40,20 +42,35 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         
         // Return the number of rows in the section.
-        return 4;
+        return tableArray.count;
+    }
+    
+    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool
+    {
+        return true;
+    }
+    
+    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!)
+    {
+        if(editingStyle == UITableViewCellEditingStyle.Delete)
+        {
+            tableArray.removeObjectAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+            tableView.reloadData()
+        }
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel.text = "Row \(indexPath.row)"
+        cell.textLabel.text = tableArray.objectAtIndex(indexPath.row) as NSString
         
         return cell
     }
 
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
     {
-        self.showAlert(indexPath.row)
+        self.showAlert(tableArray.objectAtIndex(indexPath.row) as NSString, rowToUseInAlert: indexPath.row)
     }
 
     //#pragma mark - UIAlertView delegate methods
@@ -63,11 +80,11 @@ class TableViewController: UITableViewController {
         }
         
         // Function to init a UIAlertView and show it
-        func showAlert(rowToUseInAlert: NSInteger!) {
+    func showAlert(rowTitle:NSString, rowToUseInAlert: Int) {
             var alert = UIAlertView()
             
             alert.delegate = self
-            alert.title = "Alert!"
+            alert.title = rowTitle
             alert.message = "You selected row \(rowToUseInAlert)"
             alert.addButtonWithTitle("Cancel")
             alert.addButtonWithTitle("OK")
