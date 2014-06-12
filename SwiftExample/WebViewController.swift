@@ -23,7 +23,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let requestURL = NSURL(string: "http://apple.com/wwdc")
+        let requestURL = NSURL(string: "http://apple.com")
         let request = NSURLRequest(URL: requestURL)
         webView.loadRequest(request)
     }
