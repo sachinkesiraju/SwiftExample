@@ -86,7 +86,6 @@ class TableViewController: UITableViewController {
             alert.delegate = self
             alert.title = rowTitle
             alert.message = "You selected row \(rowToUseInAlert)"
-            alert.addButtonWithTitle("Cancel")
             alert.addButtonWithTitle("OK")
             
             alert.show()
