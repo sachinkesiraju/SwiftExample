@@ -31,6 +31,42 @@
             </objects>
             <point key="canvasLocation" x="1048" y="-327"/>
         </scene>
+        <!--Camera View Controller - Camera-->
+        <scene sceneID="wfB-db-emn">
+            <objects>
+                <viewController id="hKc-Zw-bWd" customClass="CameraViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pMM-qG-X9u"/>
+                        <viewControllerLayoutGuide type="bottom" id="GLZ-Kf-J2k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ve2-Gn-BbP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQE-kM-aDn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THt-Oi-3QF">
+                                <rect key="frame" x="112" y="250" width="97" height="30"/>
+                                <state key="normal" title="Show Camera">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraShow" destination="hKc-Zw-bWd" eventType="touchUpInside" id="Vd6-is-arg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera" id="HBa-xH-yGn"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="XQE-kM-aDn" id="hD5-mh-LmV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwF-Py-j21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1521" y="-315"/>
+        </scene>
         <!--View Controller - Swift Example-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -70,6 +106,15 @@
                                     <segue destination="V4A-WZ-Px4" kind="push" id="6Gm-bN-Br1"/>
                                 </connections>
                             </button>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MT-jK-mMs">
+                                <rect key="frame" x="196" y="373" width="88" height="30"/>
+                                <state key="normal" title="View camera">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hKc-Zw-bWd" kind="push" id="ahm-DB-Vle"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -82,7 +127,7 @@
         <!--Web View Controller-->
         <scene sceneID="VOw-Q8-ULY">
             <objects>
-                <viewController id="wf8-3g-qWu" customClass="WebViewController" sceneMemberID="viewController">
+                <viewController id="wf8-3g-qWu" customClass="WebViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3O0-E3-k1G"/>
                         <viewControllerLayoutGuide type="bottom" id="NIx-Kj-uFu"/>
@@ -100,7 +145,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="K28-0f-qxu" id="Rc9-3z-qZb"/>
+                        <outlet property="webView" destination="K28-0f-qxu" id="5wY-Vy-9Ts"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1o-2E-873" userLabel="First Responder" sceneMemberID="firstResponder"/>
