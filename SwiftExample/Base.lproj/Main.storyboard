@@ -4,33 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
-        <scene sceneID="xas-nq-X9e">
-            <objects>
-                <viewController id="V4A-WZ-Px4" customClass="MapViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Jfo-Dq-cln"/>
-                        <viewControllerLayoutGuide type="bottom" id="reh-24-xxW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xF2-Ed-SWk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Spk-vP-fSU">
-                                <rect key="frame" x="0.0" y="65" width="320" height="415"/>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="rvj-dW-8z1"/>
-                    <connections>
-                        <outlet property="mapView" destination="Spk-vP-fSU" id="gDX-Os-Fdu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o1p-uV-389" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1048" y="-327"/>
-        </scene>
         <!--Camera View Controller - Camera-->
         <scene sceneID="wfB-db-emn">
             <objects>
@@ -80,7 +53,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRd-1W-njR">
-                                <rect key="frame" x="187" y="158" width="106" height="30"/>
+                                <rect key="frame" x="107" y="151" width="106" height="30"/>
                                 <state key="normal" title="View table view">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -89,7 +62,7 @@
                                 </connections>
                             </button>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vam-Mi-Rqo">
-                                <rect key="frame" x="207" y="317" width="66" height="30"/>
+                                <rect key="frame" x="127" y="237" width="66" height="30"/>
                                 <state key="normal" title="View web">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -97,17 +70,8 @@
                                     <segue destination="wf8-3g-qWu" kind="push" id="WfQ-Sr-6bb"/>
                                 </connections>
                             </button>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McD-sx-ZBW">
-                                <rect key="frame" x="217" y="238" width="67" height="30"/>
-                                <state key="normal" title="View map">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="V4A-WZ-Px4" kind="push" id="6Gm-bN-Br1"/>
-                                </connections>
-                            </button>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MT-jK-mMs">
-                                <rect key="frame" x="196" y="373" width="88" height="30"/>
+                                <rect key="frame" x="116" y="309" width="88" height="30"/>
                                 <state key="normal" title="View camera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -145,7 +109,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="K28-0f-qxu" id="5wY-Vy-9Ts"/>
+                        <outlet property="webView" destination="K28-0f-qxu" id="gp3-Ij-mYl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1o-2E-873" userLabel="First Responder" sceneMemberID="firstResponder"/>

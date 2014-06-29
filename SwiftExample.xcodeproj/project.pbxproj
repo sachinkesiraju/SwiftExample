@@ -14,7 +14,6 @@
 		031A8D8A193DB57D00F4A6D2 /* SwiftExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A8D89193DB57D00F4A6D2 /* SwiftExampleTests.swift */; };
 		031A8D94193DCBE900F4A6D2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A8D93193DCBE900F4A6D2 /* TableViewController.swift */; };
 		031A8D9A193DDD4100F4A6D2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A8D99193DDD4100F4A6D2 /* WebViewController.swift */; };
-		0356839119498B730039E42D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356839019498B730039E42D /* MapViewController.swift */; };
 		03B0EEB119595EF00048D16D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B0EEB019595EF00048D16D /* CameraViewController.swift */; };
 		03C94697195AC0C70055D2FC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C94696195AC0C70055D2FC /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		031A8D89193DB57D00F4A6D2 /* SwiftExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExampleTests.swift; sourceTree = "<group>"; };
 		031A8D93193DCBE900F4A6D2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		031A8D99193DDD4100F4A6D2 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		0356839019498B730039E42D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		03B0EEB019595EF00048D16D /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		03C94696195AC0C70055D2FC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -91,7 +89,6 @@
 				031A8D78193DB57D00F4A6D2 /* ViewController.swift */,
 				031A8D7A193DB57D00F4A6D2 /* Main.storyboard */,
 				03B0EEB019595EF00048D16D /* CameraViewController.swift */,
-				0356839019498B730039E42D /* MapViewController.swift */,
 				031A8D99193DDD4100F4A6D2 /* WebViewController.swift */,
 				031A8D93193DCBE900F4A6D2 /* TableViewController.swift */,
 				031A8D7D193DB57D00F4A6D2 /* Images.xcassets */,
@@ -227,7 +224,6 @@
 				031A8D79193DB57D00F4A6D2 /* ViewController.swift in Sources */,
 				031A8D94193DCBE900F4A6D2 /* TableViewController.swift in Sources */,
 				031A8D77193DB57D00F4A6D2 /* AppDelegate.swift in Sources */,
-				0356839119498B730039E42D /* MapViewController.swift in Sources */,
 				031A8D9A193DDD4100F4A6D2 /* WebViewController.swift in Sources */,
 				03B0EEB119595EF00048D16D /* CameraViewController.swift in Sources */,
 			);
