@@ -25,7 +25,11 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.title = "Table View"
-        
+    }
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
