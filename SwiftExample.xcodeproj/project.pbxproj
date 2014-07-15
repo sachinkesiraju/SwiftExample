@@ -14,6 +14,8 @@
 		031A8D8A193DB57D00F4A6D2 /* SwiftExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A8D89193DB57D00F4A6D2 /* SwiftExampleTests.swift */; };
 		031A8D94193DCBE900F4A6D2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A8D93193DCBE900F4A6D2 /* TableViewController.swift */; };
 		031A8D9A193DDD4100F4A6D2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031A8D99193DDD4100F4A6D2 /* WebViewController.swift */; };
+		03345B6A19755286002C0FF7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03345B6919755286002C0FF7 /* MapViewController.swift */; };
+		03345B6C197552AF002C0FF7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03345B6B197552AF002C0FF7 /* MapKit.framework */; };
 		03B0EEB119595EF00048D16D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B0EEB019595EF00048D16D /* CameraViewController.swift */; };
 		03C94697195AC0C70055D2FC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C94696195AC0C70055D2FC /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		031A8D89193DB57D00F4A6D2 /* SwiftExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExampleTests.swift; sourceTree = "<group>"; };
 		031A8D93193DCBE900F4A6D2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		031A8D99193DDD4100F4A6D2 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		03345B6919755286002C0FF7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		03345B6B197552AF002C0FF7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		03B0EEB019595EF00048D16D /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		03C94696195AC0C70055D2FC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03345B6C197552AF002C0FF7 /* MapKit.framework in Frameworks */,
 				03C94697195AC0C70055D2FC /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +71,7 @@
 		031A8D68193DB57D00F4A6D2 = {
 			isa = PBXGroup;
 			children = (
+				03345B6B197552AF002C0FF7 /* MapKit.framework */,
 				03C94696195AC0C70055D2FC /* MobileCoreServices.framework */,
 				031A8D73193DB57D00F4A6D2 /* SwiftExample */,
 				031A8D86193DB57D00F4A6D2 /* SwiftExampleTests */,
@@ -87,6 +93,7 @@
 			children = (
 				031A8D76193DB57D00F4A6D2 /* AppDelegate.swift */,
 				031A8D78193DB57D00F4A6D2 /* ViewController.swift */,
+				03345B6919755286002C0FF7 /* MapViewController.swift */,
 				031A8D7A193DB57D00F4A6D2 /* Main.storyboard */,
 				03B0EEB019595EF00048D16D /* CameraViewController.swift */,
 				031A8D99193DDD4100F4A6D2 /* WebViewController.swift */,
@@ -222,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				031A8D79193DB57D00F4A6D2 /* ViewController.swift in Sources */,
+				03345B6A19755286002C0FF7 /* MapViewController.swift in Sources */,
 				031A8D94193DCBE900F4A6D2 /* TableViewController.swift in Sources */,
 				031A8D77193DB57D00F4A6D2 /* AppDelegate.swift in Sources */,
 				031A8D9A193DDD4100F4A6D2 /* WebViewController.swift in Sources */,

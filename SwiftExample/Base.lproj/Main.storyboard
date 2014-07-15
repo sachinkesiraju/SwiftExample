@@ -25,7 +25,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cameraShow" destination="hKc-Zw-bWd" eventType="touchUpInside" id="Vd6-is-arg"/>
+                                    <action selector="cameraShow" destination="hKc-Zw-bWd" eventType="touchUpInside" id="iht-ZB-bX4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,7 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="HBa-xH-yGn"/>
                     <connections>
-                        <outlet property="backgroundImage" destination="XQE-kM-aDn" id="hD5-mh-LmV"/>
+                        <outlet property="backgroundImage" destination="XQE-kM-aDn" id="lXX-tv-siF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwF-Py-j21" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -79,6 +79,15 @@
                                     <segue destination="hKc-Zw-bWd" kind="push" id="ahm-DB-Vle"/>
                                 </connections>
                             </button>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWE-sn-Ss1">
+                                <rect key="frame" x="126" y="373" width="68" height="30"/>
+                                <state key="normal" title="View Map">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7RA-yL-fnV" kind="push" id="UVz-K3-vd8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -91,7 +100,7 @@
         <!--Web View Controller-->
         <scene sceneID="VOw-Q8-ULY">
             <objects>
-                <viewController id="wf8-3g-qWu" customClass="WebViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wf8-3g-qWu" customClass="WebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3O0-E3-k1G"/>
                         <viewControllerLayoutGuide type="bottom" id="NIx-Kj-uFu"/>
@@ -116,10 +125,37 @@
             </objects>
             <point key="canvasLocation" x="1044" y="835"/>
         </scene>
+        <!--Map View Controller - Map-->
+        <scene sceneID="uUf-GJ-RqD">
+            <objects>
+                <viewController id="7RA-yL-fnV" customClass="MapViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bR2-Mi-XwT"/>
+                        <viewControllerLayoutGuide type="bottom" id="xwN-Sp-Mnf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fB1-h8-Ijs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ja9-rN-D64">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="ahj-KB-B5f"/>
+                    <connections>
+                        <outlet property="mapView" destination="Ja9-rN-D64" id="0Tk-t9-jZb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ay5-IV-05t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504" y="892"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="NnP-1b-wea">
             <objects>
-                <tableViewController id="b2E-rT-I2x" customClass="TableViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="b2E-rT-I2x" customClass="TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sBK-2t-OEb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +175,9 @@
                             <outlet property="delegate" destination="b2E-rT-I2x" id="bSw-U0-Jsh"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XpV-KF-eus" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
