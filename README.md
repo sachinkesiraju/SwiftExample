@@ -5,7 +5,7 @@ A small iOS app to demonstrate the use of table views, web views, map views and 
 
 <h2>Features:</h2>
 
-- Camera view - ability to take pictures and save to camera roll
-- Table view - ability to select and delete table view cells
-- Web view - ability to view a web page within the app
-- Map view - ability to geocode an address string and display it on a map
+- <b>Camera view</b> - ability to take pictures and save to camera roll
+- <b>Table view</b> - ability to select and delete table view cells
+- <b>Web view</b> - ability to view a web page within the app
+- <b>Map view</b>- ability to geocode an address string and display it on a map
