@@ -3,6 +3,8 @@ SwiftExample
 
 A small iOS app to demonstrate the use of table views, web views, map views and camera views using Swift, the new programming language for iOS development.
 
+Your one stop shop for all things Swift.
+
 <h2>Features:</h2>
 
 - <b>Camera view</b> - ability to take pictures and save to camera roll
