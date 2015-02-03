@@ -12,14 +12,14 @@ import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
-    @IBOutlet var mapView : MKMapView
+    @IBOutlet var mapView : MKMapView?
     
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
     
-    init(coder aDecoder: NSCoder!)  {
+    required init(coder aDecoder: NSCoder)  {
         super.init(coder: aDecoder)
     }
     
@@ -27,12 +27,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.mapView.delegate = self
+//        self.mapView.delegate = self
         let location = "1 Infinity Loop, Cupertino, CA"
         var geocoder:CLGeocoder = CLGeocoder()
-        geocoder.geocodeAddressString(location, {(placemarks: AnyObject[]!, error: NSError!) -> Void in
+        geocoder.geocodeAddressString(location, {(placemarks, error) -> Void in
             
-            if(error){
+            if((error) != nil){
                 
                 println("Error", error)
             }
@@ -46,9 +46,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 pointAnnotation.coordinate = coordinates
                 pointAnnotation.title = "Apple HQ"
                 
-                self.mapView.addAnnotation(pointAnnotation)
-                self.mapView.centerCoordinate = coordinates
-                self.mapView.selectAnnotation(pointAnnotation, animated: true)
+                self.mapView?.addAnnotation(pointAnnotation)
+                self.mapView?.centerCoordinate = coordinates
+                self.mapView?.selectAnnotation(pointAnnotation, animated: true)
                 
                 println("Added annotation to map view")
             }

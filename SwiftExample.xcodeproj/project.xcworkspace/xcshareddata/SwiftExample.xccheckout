@@ -10,29 +10,29 @@
 	<string>SwiftExample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>6253E6BE-E7C9-461E-934D-3F90F3BAF81A</key>
+		<key>FF37E7162EB7D2BBDB58A5670D9580FEF7857AC6</key>
 		<string>https://github.com/sachinkesiraju/SwiftExample.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SwiftExample.xcodeproj/project.xcworkspace</string>
+	<string>SwiftExample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>6253E6BE-E7C9-461E-934D-3F90F3BAF81A</key>
+		<key>FF37E7162EB7D2BBDB58A5670D9580FEF7857AC6</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/sachinkesiraju/SwiftExample.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6253E6BE-E7C9-461E-934D-3F90F3BAF81A</string>
+	<string>FF37E7162EB7D2BBDB58A5670D9580FEF7857AC6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>6253E6BE-E7C9-461E-934D-3F90F3BAF81A</string>
+			<string>FF37E7162EB7D2BBDB58A5670D9580FEF7857AC6</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SwiftExample</string>
 		</dict>
