@@ -12,12 +12,12 @@ class TableViewController: UITableViewController {
 
     var tableArray:NSMutableArray = ["Swift", "Objective -C", "Python", "Java", "Ruby"]
     
-    init(style: UITableViewStyle) {
+    override init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
     }
     
-    init(coder aDecoder: NSCoder!)  {
+    required init(coder aDecoder: NSCoder)  {
         super.init(coder: aDecoder)
     }
 
@@ -50,12 +50,12 @@ class TableViewController: UITableViewController {
         return tableArray.count;
     }
     
-    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
     {
         return true;
     }
     
-    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!)
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
         if(editingStyle == UITableViewCellEditingStyle.Delete)
         {
@@ -64,16 +64,15 @@ class TableViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+
     
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-        
-        cell.textLabel.text = tableArray.objectAtIndex(indexPath.row) as NSString
-        
+        cell.textLabel?.text = tableArray.objectAtIndex(indexPath.row) as NSString
         return cell
     }
-
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         self.showAlert(tableArray.objectAtIndex(indexPath.row) as NSString, rowToUseInAlert: indexPath.row)
     }
