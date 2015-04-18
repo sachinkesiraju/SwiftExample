@@ -67,14 +67,14 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel?.text = tableArray.objectAtIndex(indexPath.row) as NSString
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        cell.textLabel?.text = tableArray.objectAtIndex(indexPath.row) as! String
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        self.showAlert(tableArray.objectAtIndex(indexPath.row) as NSString, rowToUseInAlert: indexPath.row)
+        self.showAlert(tableArray.objectAtIndex(indexPath.row) as! NSString, rowToUseInAlert: indexPath.row)
     }
     
     //#pragma mark - UIAlertView delegate methods
@@ -88,7 +88,7 @@ class TableViewController: UITableViewController {
             var alert = UIAlertView()
             
             alert.delegate = self
-            alert.title = rowTitle
+            alert.title = rowTitle as String
             alert.message = "You selected row \(rowToUseInAlert)"
             alert.addButtonWithTitle("OK")
             

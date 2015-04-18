@@ -30,7 +30,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 //        self.mapView.delegate = self
         let location = "1 Infinity Loop, Cupertino, CA"
         var geocoder:CLGeocoder = CLGeocoder()
-        geocoder.geocodeAddressString(location, {(placemarks, error) -> Void in
+        geocoder.geocodeAddressString(location, completionHandler: {(placemarks, error) -> Void in
             
             if((error) != nil){
                 
@@ -39,7 +39,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 
             else if let placemark = placemarks?[0] as? CLPlacemark {
                 
-                var placemark:CLPlacemark = placemarks[0] as CLPlacemark
+                var placemark:CLPlacemark = placemarks[0] as! CLPlacemark
                 var coordinates:CLLocationCoordinate2D = placemark.location.coordinate
                 
                 var pointAnnotation:MKPointAnnotation = MKPointAnnotation()
