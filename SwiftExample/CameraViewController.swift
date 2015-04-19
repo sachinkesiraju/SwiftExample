@@ -63,12 +63,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func imagePickerController(picker:UIImagePickerController!, didFinishPickingMediaWithInfo info:NSDictionary)
-    {
-        var mediaType:NSString = info.objectForKey(UIImagePickerControllerEditedImage) as NSString
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        var mediaType:String = editingInfo[UIImagePickerControllerEditedImage] as! String
         var imageToSave:UIImage
         
-        imageToSave = info.objectForKey(UIImagePickerControllerOriginalImage) as UIImage
+        imageToSave = editingInfo[UIImagePickerControllerOriginalImage]as! UIImage
         
         UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
         self.savedImage()
